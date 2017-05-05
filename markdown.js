@@ -32,9 +32,9 @@ var md = markdownit({
 md.parser
   .use(attrs)
   .use(headerSections)
+  .use(checkbox)
   .use(implicitFigures)
   .use(anchor)
-  .use(checkbox)
   .linkify.tlds('.py', false)  // linkify: turn of .py top level domain
 
 module.exports = md
